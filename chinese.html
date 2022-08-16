@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP English</title>
+    <!-- ==== CSS ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo"><a href="#header">VIP English</a></h1>
+        <ul class="nav-links">
+            <li><a href="#lessons">课程</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#maptrax">地图</a></li>
+            <li class="ctn"><a  href="#contact">接触</a></li>
+            <li><a href="index.html"><img src="img/english.png"></a></li>
+        </ul>
+       <div class="mobile-nav">
+        <img src="./img/menu-btn.png" alt="" class="menu-btn">
+        <h1 class="close-btn">X</h1>
+       </div>
+    </nav>
+
+    <header id="header">
+        <div class="header-content">
+            <h2>你好</h2>
+            <div class="line"></div>
+            <h1>您将和我们一起学习英语！</h1>
+        <!--<a href="#" class="ctn"></a>-->
+        </div>
+    </header>
+
+    <!-- == Events == -->
+    <section class="events" id="lessons">
+        <div class="title">
+            <h1>课程</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./img/guy.png" alt="">
+                <h4>私人课程</h4>
+                <p></p>
+                <a href="https://www.tutoroo.co/learn-english-with-david-in-singapore-307328" target="_blank" class="ctn">更多信息</a>
+            </div>
+            <div class="col">
+                <img src="./img/guys.png" alt="">
+                <h4>小组课程</h4>
+                <p></p>
+                <a href="https://www.tutoroo.co/learn-english-with-david-in-singapore-307328" target="_blank" class="ctn">更多信息</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore" id="about">
+      <div class="explore-content" >
+        <h1>关于我</h1>
+        <div class="line"></div>
+        <p class="ops">我从 1999 年开始教英语。
+
+            我教过 3 年的前几家公司的参考资料之一准确地总结了我的性格和技能。
+            
+            参考如下：
+            
+            自 2019 年以来，Moris Ltd 一直与 David Gordon 合作，为我们公司的高管提供有关通用英语和商务英语的个人培训。
+          </p>  
+        <br>
+        <a href="https://www.tutoroo.co/learn-english-with-david-in-singapore-307328" class="ctn" target="_blank" >点击了解更多</a>
+      </div>
+    </section>
+
+    <section class="tours" id="maptrax">
+        <div class="row">
+            <div class="col content-col">
+                <h1>Maptrax 新加坡</h1>
+                <div class="line"></div>
+                <p>相关信息 MATRAX</p>
+                <a href="#contact" class="ctn">联系我购买</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="./img/img3.png" alt="">
+                    <img src="./img/img4.png" alt="">
+                    <img src="./img/img5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer" id="contact">
+        <p>David Gordon</p>
+        <p>E-mail: Global.dgordon@gmail.com</p>
+        <p>电话号码: </p>
+        <a href="https://www.tutoroo.co/learn-english-with-david-in-singapore-307328" class="ctn" target="_blank" >Tutoroo</a>
+        <p>祝你有美好的一天!!!</p>
+    </section>
+
+    <script>
+        const mobileNav = document.querySelector('.mobile-nav')
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+        const closeBtn = document.querySelector('.close-btn')
+
+        mobileNav.addEventListener('click',(e)=>{
+            navlinks.classList.toggle('mobile-menu')
+            if(e.target === menuBtn){
+                menuBtn.replaceWith(closeBtn)
+                closeBtn.style.display = 'block'
+            }
+            if(e.target === closeBtn){
+                closeBtn.replaceWith(menuBtn)
+            }
+            /*if(e.target === onclick(navlinks))
+            {
+                closeBtn.replaceWith(menuBtn)
+            }*/
+        })
+    </script>
+</body>
+</html>
